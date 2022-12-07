@@ -1,0 +1,29 @@
+
+#novo filme
+# POST http://localhost:8080/api/movies/
+# Content-Type: application/json
+
+# {
+#     "title": "Titanic",
+#     "description": "Navio naufragado",
+#     "release": "2010-10-10"
+# }
+
+#listar filmes
+# GET http://localhost:8080/api/movies/
+
+#atualizar filme
+# PUT http://localhost:8080/api/movies/6e908f2c-ee9d-4346-af8a-3eea77794187
+# Content-Type: application/json
+
+# {
+#     "title": "Titanic 2",
+#     "description": "Navio naufragado",
+#     "release": "2010-10-10"
+# }
+
+#deletar filme
+# DELETE http://localhost:8080/api/movies/5b6f494d-b49f-49db-b346-8816959af75c
+
+#listar por id
+# GET http://localhost:8080/api/movies/5b6f494d-b49f-49db-b346-8816959af75c
