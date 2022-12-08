@@ -12,7 +12,7 @@ import felipe.teixeira.tds.domain.Movie;
 public class MovieRepository {
 
 
-    ArrayList<Movie> movies = new ArrayList<>();
+    public ArrayList<Movie> movies = new ArrayList<>();
 
     public void save(UUID id, Movie movie) {
         this.delete(id);
