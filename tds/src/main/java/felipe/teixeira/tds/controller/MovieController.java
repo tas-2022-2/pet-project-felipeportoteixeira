@@ -24,7 +24,7 @@ import org.springframework.http.ResponseEntity;
 
 
 
-@RestController // Spring/Injeção de Dependência
+@RestController
 @RequestMapping(
     path = "/api/movies/", 
     produces = MediaType.APPLICATION_JSON_VALUE
@@ -38,7 +38,7 @@ public class MovieController {
     }
 
     @PostMapping
-    public ResponseEntity<?> newMovie(@RequestBody Movie movie) {
+    public ResponseEntity<Object> newMovie(@RequestBody Movie movie) {
 
         Movie newMovie = movieService.newMovie(movie);
 
@@ -71,8 +71,7 @@ public class MovieController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteMovie (@PathVariable(value = "id") UUID id) {
-
+    public ResponseEntity<Object> deleteMovie (@PathVariable(value = "id") UUID id) {
         try {
             movieService.deleteMovie(id);
             return ResponseEntity.ok().build();
@@ -83,7 +82,6 @@ public class MovieController {
 
     @GetMapping
     public ArrayList<Movie> listMovies() {
-        
         return movieService.listMovies();
 
     }
